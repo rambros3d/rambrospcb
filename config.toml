@@ -73,7 +73,7 @@ links = [
 
 # SEO & Social Sharing
 # Default OG image (1200x628 recommended) - used when no page-specific card is set
-card = "card.png"
+card = "hero-photo.jpg"
 
 # Twitter handle for Twitter Card attribution
 twitter_handle = "RamBrosResearch"
