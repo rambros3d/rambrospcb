@@ -1,366 +1,699 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %} {% set home =
+load_data(path="data/home.yaml") %}
 <div class="homepage-wrapper">
-  <!-- Hero Section -->
-  <div class="hero-section">
-    <div class="hero-image-container">
-      <img src="{{ get_url(path='hero-photo.jpg') }}" alt="Futuristic Printed Circuit Board" />
-    </div>
-    <div class="hero-text-container">
-      <h1>RamBros Research</h1>
-      <p class="hero-tagline">எண்ணம் போல் வாழ்க்கை</p>
-      <p class="hero-description">
-        Master the art of printed circuit board design from absolute beginner to industry professional.
-        Learn schematic capture, component selection, multi-layer routing, and manufacturing.
-      </p>
-      <div class="hero-links">
-        {% set social_link_class = "hero-social-link" %}
-        {% include "partials/social-links.html" %}
-      </div>
-    </div>
-  </div>
-
-  <!-- Course Series Section -->
-  <div class="course-series-section">
-    <div class="section-title-container">
-      <h2>PCB பாடங்கள்</h2>
-      <div class="title-underline"></div>
-    </div>
-
-    <div id="article-list" class="course-list">
-      <!-- Beginner Card -->
-      <article class="course-card">
-        <a href="{{ get_url(path='@/beginner/_index.md') }}"></a>
-        <div class="course-card-content">
-          <img src="{{ get_url(path='hero-photo.jpg') }}" class="course-card-image" alt="Beginner Course Thumbnail" />
-          <div class="course-card-text">
-            <h3>Beginner Series</h3>
-            <p>Start your PCB design journey here. Designed for absolute beginners with zero prior experience.</p>
-          </div>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="hero-image-container">
+                <img
+                    src="{{ get_url(path=home.hero_photo) }}"
+                    alt="Shreeram Trainer"
+                />
+            </div>
+            <div class="hero-text-container">
+                <h1>RamBros Research</h1>
+                <p class="hero-tagline">{{ home.hero_tagline }}</p>
+                <p class="hero-description">{{ home.hero_description | linebreaksbr | safe }}</p>
+            </div>
         </div>
-      </article>
-
-      <!-- Intermediate Card -->
-      <article class="course-card coming-soon">
-        <a href="{{ get_url(path='@/intermediate/_index.md') }}"></a>
-        <div class="course-card-content">
-          <img src="{{ get_url(path='hero-photo.jpg') }}" class="course-card-image"
-            alt="Intermediate Course Thumbnail" />
-          <div class="course-card-text">
-            <h3>Intermediate Series</h3>
-            <p>Take your designs to the next level. Learn advanced engineering, high-speed routing, and multi-layer
-              stackups.</p>
-          </div>
+        <div class="hero-links">
+            {% set social_link_class = "hero-social-link" %} {% set
+            social_show_labels = true %} {% include "partials/social-links.html"
+            %}
         </div>
-      </article>
     </div>
 
-    <!-- General Resources Button -->
-    <div class="resources-button-container">
-      <a href="{{ get_url(path='@/resources/_index.md') }}" class="general-resources-button">General Resources</a>
-    </div>
-  </div>
+    <!-- Course Series Section -->
+    <div class="course-series-section">
+        <div class="section-title-container">
+            <h2>PCB Tutorials</h2>
+            <div class="title-underline"></div>
+        </div>
 
-  <!-- About Me Section -->
-  <div class="about-section">
-    <div class="section-title-container">
-      <h2>About Me</h2>
-      <div class="title-underline"></div>
-    </div>
-    <div class="about-content">
-      <div class="about-text">
-        <p>
-          I'm a PCB designer with <strong>6 years of hands-on experience</strong> designing circuit boards for real-world products. My boards are being used in <strong>20+ countries</strong> across various industries.
+        <p class="tutorials-description">
+            {{ home.tutorials_description | linebreaksbr | safe }}
         </p>
-        <p>
-          My goal is simple: <strong>make PCB design easy</strong> for everyone. Whether you're a complete beginner or an experienced engineer looking to level up, I'm here to guide you through every step of the process.
-        </p>
-      </div>
+
+        <div id="article-list" class="course-list">
+            {% for tutorial in home.items %}
+            <article
+                class="course-card{% if tutorial.coming_soon %} coming-soon{% endif %}"
+            >
+                <a href="{{ get_url(path=tutorial.url) }}"></a>
+                <div class="course-card-content">
+                    <img
+                        src="{{ get_url(path=tutorial.image) }}"
+                        class="course-card-image"
+                        alt="{{ tutorial.title }} Thumbnail"
+                    />
+                    <div class="course-card-text">
+                        <h3>{{ tutorial.title }}</h3>
+                        <p>{{ tutorial.description }}</p>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <!-- General Resources Button -->
+        <div class="resources-button-container">
+            <a
+                href="{{ get_url(path='@/resources/_index.md') }}"
+                class="general-resources-button"
+                >General Resources</a
+            >
+        </div>
     </div>
-  </div>
+
+    <!-- About Me Section -->
+    <div class="about-section">
+        <div class="section-title-container">
+            <h2>About Me</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-image-container">
+                <img
+                    src="{{ get_url(path=home.about_photo) }}"
+                    alt="About Shreeram"
+                    class="about-image no-hover"
+                />
+            </div>
+            <div class="about-text">{{ home.about_description | linebreaksbr | safe }}</div>
+
+            <!-- Project Gallery -->
+            {% set projects = load_data(path="data/projects.yaml") %}
+            <div class="project-gallery">
+                {% for project in projects.items %}
+                <div
+                    class="gallery-item"
+                    data-title="{{ project.title }}"
+                    data-description="{{ project.description }}"
+                    data-url="{{ project.url }}"
+                >
+                    <img
+                        src="{{ get_url(path=project.image) }}"
+                        alt="{{ project.title }}"
+                        class="gallery-image"
+                    />
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <button class="modal-nav modal-prev" aria-label="Previous project">
+                &#10094;
+            </button>
+            <button class="modal-nav modal-next" aria-label="Next project">
+                &#10095;
+            </button>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="" class="modal-image" />
+            </div>
+            <div class="modal-info">
+                <div class="modal-title-row">
+                    <h3 id="modal-title" class="modal-title"></h3>
+                    <a
+                        id="modal-link"
+                        href="#"
+                        class="modal-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >View Project</a
+                    >
+                </div>
+                <p id="modal-description" class="modal-description"></p>
+            </div>
+        </div>
+    </div>
 </div>
 
+<script src="{{ get_url(path='gallery.js') }}"></script>
+
 <style>
-  /* Hero Section Layout */
-  .hero-section {
-    display: flex;
-    flex-direction: row;
-    gap: 2.5rem;
-    align-items: center;
-    padding: 1rem 0;
-    margin-bottom: 2.5rem;
-    margin-top: 0.5rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  @media (max-width: 768px) {
+    /* Hero Section Layout */
     .hero-section {
-      flex-direction: column;
-      padding: 1.5rem;
-      gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem 0;
+        margin-bottom: 2.5rem;
+        margin-top: 0.5rem;
+        position: relative;
     }
-  }
 
-  .hero-image-container {
-    flex-shrink: 0;
-  }
+    .hero-content {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+        align-items: center;
+    }
 
-  .hero-image-container img {
-    width: 240px !important;
-    height: 240px !important;
-    object-fit: cover !important;
-    border-radius: 50% !important;
-    box-shadow: var(--shadow-raised) !important;
-    border: none !important;
-    display: block !important;
-    transform: none !important;
-    transition: none !important;
-  }
+    @media (max-width: 768px) {
+        .hero-content {
+            flex-direction: column;
+            padding: 0;
+            gap: 1.5rem;
+        }
 
-  .hero-image-container img:hover {
-    transform: none !important;
-    transition: none !important;
-  }
+        .hero-section {
+            padding: 1.5rem;
+            gap: 1.25rem;
+        }
+    }
 
-  .hero-text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
+    .hero-image-container {
+        flex-shrink: 0;
+    }
 
-  .hero-text-container h1 {
-    margin: 0 0 0.25rem 0;
-    font-size: var(--font-size-xx-large);
-    color: var(--accent-color);
-    font-weight: 500;
-    font-family: var(--font-antique);
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    font-optical-sizing: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-  }
+    .hero-image-container img {
+        width: 240px !important;
+        height: 240px !important;
+        object-fit: cover !important;
+        border-radius: 25% !important;
+        box-shadow: var(--shadow-raised) !important;
+        border: none !important;
+        display: block !important;
+        transform: none !important;
+        transition: none !important;
+    }
 
-  .hero-tagline {
-    font-size: var(--font-size-large);
-    font-weight: 600;
-    font-style: italic;
-    color: var(--fg-color);
-    opacity: 0.9;
-    margin: 0 0 1rem 0;
-  }
+    .hero-image-container img:hover {
+        transform: none !important;
+        transition: none !important;
+    }
 
-  .hero-description {
-    margin: 0 0 1.5rem 0;
-    color: var(--fg-color);
-    opacity: 0.8;
-    line-height: 1.6;
-    font-size: var(--font-size-medium);
-  }
+    .hero-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 240px;
+        align-items: center;
+        text-align: center;
+    }
 
-  .hero-links {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
+    @media (max-width: 768px) {
+        .hero-text-container {
+            min-height: auto;
+        }
+    }
 
-  .hero-social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    color: var(--fg-color);
-    background-color: var(--bg-color-2);
-    border: 1px solid var(--fg-muted-2);
-    transition: var(--transition);
-  }
+    .hero-text-container h1 {
+        margin: 0 0 0.25rem 0;
+        font-size: var(--font-size-xx-large);
+        color: var(--accent-color);
+        font-weight: 600;
+        font-family: var(--font-antique);
+        font-variation-settings:
+            "SOFT" 100,
+            "WONK" 1;
+        font-optical-sizing: auto;
+        letter-spacing: normal;
+        word-spacing: normal;
+    }
 
-  .hero-social-link:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-raised);
-  }
+    .hero-tagline {
+        font-size: var(--font-size-large);
+        font-weight: 600;
+        font-style: italic;
+        color: var(--fg-color);
+        opacity: 0.9;
+        margin: 0 0 1rem 0;
+    }
 
-  .hero-social-link svg {
-    width: 22px;
-    height: 22px;
-    fill: currentColor;
-  }
+    .hero-description {
+        margin: 0 0 1.5rem 0;
+        color: var(--fg-color);
+        opacity: 0.8;
+        line-height: 1.6;
+        font-weight: 500;
+        font-family: var(--font-antique);
+        font-variation-settings:
+            "SOFT" 100,
+            "WONK" 1;
+        font-size: var(--font-size-medium);
+    }
+    .hero-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+    }
 
-  /* Section Title Layout */
-  .section-title-container {
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
+    .hero-social-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.35rem 0.75rem 0.35rem 0.45rem;
+        border-radius: 0;
+        color: var(--fg-color);
+        background-color: transparent;
+        border: 2px solid var(--fg-muted-2);
+        transition: all 0.2s ease;
+        text-decoration: none;
+    }
 
-  .section-title-container h2 {
-    font-size: var(--font-size-x-large);
-    color: var(--fg-color);
-    margin: 0 0 0.5rem 0;
-    font-weight: 500;
-    font-family: var(--font-antique);
-    font-variation-settings: "SOFT" 100, "WONK" 1;
-    font-optical-sizing: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-  }
+    .hero-social-link:hover {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        background-color: var(--bg-color-2);
+    }
 
-  .title-underline {
-    width: 4rem;
-    height: 0.25rem;
-    background-color: var(--accent-color);
-    margin: 0 auto;
-    border-radius: 999px;
-  }
+    .hero-social-link svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+        flex-shrink: 0;
+    }
 
-  /* Course List Cards Layout */
-  .course-list {
-    margin-block-start: 0 !important;
-  }
+    .social-link-label {
+        font-size: 0.85rem;
+        font-weight: 500;
+        white-space: nowrap;
+    }
 
-  .course-card {
-    padding: 0 !important;
-    border-radius: 0 !important;
-    overflow: hidden !important;
-    height: 140px !important;
-  }
+    @media (max-width: 580px) {
+        .hero-social-link {
+            padding: 0.35rem 0.75rem 0.35rem 0.45rem;
+        }
 
-  .course-card a {
-    border-radius: 0 !important;
-  }
+        .hero-social-link svg {
+            width: 18px;
+            height: 18px;
+        }
 
-  .course-card-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-  }
+        .social-link-label {
+            font-size: 0.8rem;
+        }
+    }
 
-  @media (max-width: 580px) {
+    /* Section Title Layout */
+    .section-title-container {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .section-title-container h2 {
+        font-size: var(--font-size-x-large);
+        color: var(--fg-color);
+        margin: 0 0 0.5rem 0;
+        font-weight: 600;
+        font-family: var(--font-antique);
+        font-variation-settings:
+            "SOFT" 100,
+            "WONK" 1;
+        font-optical-sizing: auto;
+        letter-spacing: normal;
+        word-spacing: normal;
+    }
+
+    .title-underline {
+        width: 4rem;
+        height: 0.25rem;
+        background-color: var(--accent-color);
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+    /* Tutorials Description */
+    .tutorials-description {
+        text-align: center;
+        color: var(--fg-color);
+        opacity: 0.8;
+        line-height: 1.6;
+        font-size: var(--font-size-medium);
+        margin: -1.5rem 0 2rem 0;
+    }
+
+    /* Course List Cards Layout */
+    .course-list {
+        margin-block-start: 0 !important;
+    }
+
     .course-card {
-      height: auto !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        overflow: hidden !important;
+        height: 140px !important;
+    }
+
+    .course-card a {
+        border-radius: 0 !important;
     }
 
     .course-card-content {
-      flex-direction: column;
-      align-items: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+    }
+
+    @media (max-width: 580px) {
+        .course-card {
+            height: auto !important;
+        }
+
+        .course-card-content {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .course-card-image {
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 4 / 3 !important;
+            margin: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            border-right: none !important;
+            border-bottom: 1px solid var(--fg-muted-2) !important;
+        }
     }
 
     .course-card-image {
-      width: 100% !important;
-      height: auto !important;
-      aspect-ratio: 4 / 3 !important;
-      margin: 0 !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-      border-right: none !important;
-      border-bottom: 1px solid var(--fg-muted-2) !important;
+        width: 187px !important;
+        height: 140px !important;
+        aspect-ratio: 4 / 3 !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        flex-shrink: 0 !important;
+        border: none !important;
+        border-right: 1px solid var(--fg-muted-2) !important;
     }
-  }
 
-  .course-card-image {
-    width: 187px !important;
-    height: 140px !important;
-    aspect-ratio: 4 / 3 !important;
-    margin: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    background-color: transparent !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    flex-shrink: 0 !important;
-    border: none !important;
-    border-right: 1px solid var(--fg-muted-2) !important;
-    transition: var(--transition);
-  }
+    .course-card:hover .course-card-image {
+        border-color: var(--accent-color) !important;
+    }
 
-  .course-card:hover .course-card-image {
-    border-color: var(--accent-color) !important;
-  }
+    .resources-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
 
-  .resources-button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-  }
+    .general-resources-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 2.25rem;
+        font-family: var(--font-system-ui);
+        font-weight: 600;
+        color: var(--accent-color);
+        border: 2px solid var(--accent-color);
+        border-radius: 0;
+        background-color: transparent;
+        text-decoration: none;
+    }
 
-  .general-resources-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.75rem 2.25rem;
-    font-family: var(--font-system-ui);
-    font-weight: 600;
-    color: var(--accent-color);
-    border: 2px solid var(--accent-color);
-    border-radius: var(--rounded-corner-small);
-    background-color: transparent;
-    text-decoration: none;
-    transition: var(--transition);
-  }
+    .general-resources-button:hover {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-raised);
+    }
 
-  .general-resources-button:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-raised);
-  }
+    .general-resources-button:active {
+        transform: translateY(0);
+    }
 
-  .general-resources-button:active {
-    transform: translateY(0);
-  }
+    .course-card-text {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
 
-  .course-card-text {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1.5rem;
-  }
+    .course-card-text h3 {
+        margin: 0 0 0.35rem 0 !important;
+        font-size: var(--font-size-large);
+    }
 
-  .course-card-text h3 {
-    margin: 0 0 0.35rem 0 !important;
-    font-size: var(--font-size-large);
-  }
+    .course-card-text p {
+        margin: 0 !important;
+        color: var(--fg-color);
+        opacity: 0.75;
+        line-height: 1.5;
+        font-size: var(--font-size-small);
+    }
 
-  .course-card-text p {
-    margin: 0 !important;
-    color: var(--fg-color);
-    opacity: 0.75;
-    line-height: 1.5;
-    font-size: var(--font-size-small);
-  }
+    /* About Section */
+    .about-section {
+        margin-top: 4rem;
+        padding: 2rem 0;
+    }
 
-  /* About Section */
-  .about-section {
-    margin-top: 4rem;
-    padding: 2rem 0;
-  }
+    .about-content {
+        max-width: 640px;
+        margin: 0 auto;
+    }
 
-  .about-content {
-    max-width: 640px;
-    margin: 0 auto;
-  }
+    .about-image-container {
+        margin-bottom: 1.5rem;
+        line-height: 0;
+    }
 
-  .about-text p {
-    color: var(--fg-color);
-    opacity: 0.85;
-    line-height: 1.7;
-    font-size: var(--font-size-medium);
-    margin: 0 0 1rem 0;
-  }
+    .about-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        border-radius: 16px;
+    }
 
-  .about-text p:last-child {
-    margin-bottom: 0;
-  }
+    .about-text p {
+        color: var(--fg-color);
+        opacity: 0.85;
+        line-height: 1.7;
+        font-size: var(--font-size-medium);
+        margin: 0 0 1rem 0;
+    }
 
-  .about-text strong {
-    color: var(--accent-color);
-    font-weight: 600;
-  }
+    .about-text p:last-child {
+        margin-bottom: 0;
+    }
+
+    .about-text strong {
+        color: var(--accent-color);
+        font-weight: 600;
+    }
+
+    /* Project Gallery - Card style matching tutorial cards */
+    .project-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 2rem;
+        column-gap: 4px;
+        background-image:
+            linear-gradient(
+                var(--accent-color-alpha),
+                var(--accent-color-alpha)
+            ),
+            linear-gradient(var(--glass-bg), var(--glass-bg));
+        background-color: var(--bg-color);
+        box-shadow: var(--edge-highlight), var(--shadow-glass);
+    }
+
+    .gallery-item {
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 0;
+        border: none;
+        line-height: 0;
+        aspect-ratio: 5 / 4;
+    }
+
+    .gallery-item:hover {
+        opacity: 0.9;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        transition: none !important;
+        transform: none !important;
+        border-radius: 0;
+    }
+
+    @media (max-width: 768px) {
+        .project-gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 580px) {
+        .project-gallery {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Gallery Modal */
+    .gallery-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1.5rem;
+        overflow: hidden;
+    }
+
+    .gallery-modal.active {
+        display: flex;
+    }
+
+    .modal-content {
+        position: relative;
+        width: min(94vw, 640px);
+        height: auto;
+        max-height: 100vh;
+        background-color: var(--bg-color);
+        border-radius: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-content::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .modal-content::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .modal-content::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 0;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+        border: none;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    /* Modal Navigation Chevrons */
+    .modal-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: clamp(2rem, 5vw, 3rem);
+        height: clamp(2rem, 5vw, 3rem);
+        border: none;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: clamp(0.8rem, 2vw, 1.1rem);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        opacity: 0.8;
+    }
+
+    .modal-nav:hover {
+        opacity: 1;
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+    }
+
+    .modal-prev {
+        left: 0.5rem;
+    }
+
+    .modal-next {
+        right: 0.5rem;
+    }
+
+    .modal-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+        transition: none !important;
+        transform: none !important;
+    }
+
+    .modal-info {
+        padding: min(0.5rem, 1.5vw) min(0.75rem, 2vw);
+        flex-shrink: 0;
+        border-top: 1px solid var(--fg-muted-2);
+    }
+
+    .modal-title-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+    }
+
+    .modal-title {
+        margin: 0;
+        font-size: clamp(1rem, 2.5vw, var(--font-size-large));
+        color: var(--fg-color);
+        min-width: 0;
+        flex: 1;
+    }
+
+    .modal-description {
+        margin: 0.3rem 0 0 0;
+        color: var(--fg-color);
+        opacity: 0.75;
+        line-height: 1.5;
+        font-size: clamp(0.8rem, 2vw, var(--font-size-medium));
+    }
+
+    .modal-link {
+        display: inline-flex;
+        align-items: center;
+        padding: clamp(0.35rem, 1vw, 0.5rem) clamp(0.75rem, 2vw, 1.25rem);
+        font-weight: 600;
+        color: var(--contrast-color);
+        background-color: var(--accent-color);
+        border-radius: 0;
+        text-decoration: none;
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+    }
 </style>
 {% endblock content %}

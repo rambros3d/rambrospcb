@@ -3,7 +3,7 @@
 
 title = "RamBros Research"
 theme = "duckquill"
-base_url = "https://rambrosresearch.pages.dev"
+base_url = "https://pcb.rambros3d.com/"
 description = "Free PCB Design Tutorials - Learn PCB design from beginner to advanced"
 compile_sass = true
 minify_html = true
@@ -29,6 +29,9 @@ theme = "monokai"
 index_format = "fuse_json"
 
 [extra]
+# Global custom styles
+styles = ["custom.css"]
+
 # Blue brand colors
 accent_color = "#448ff3"
 accent_color_dark = "#448ff3"
@@ -36,8 +39,6 @@ accent_color_dark = "#448ff3"
 # Default theme - dark for technical content
 default_theme = "dark"
 
-# Emoji favicon
-emoji_favicon = "🔌"
 
 # Features
 show_copy_button = true

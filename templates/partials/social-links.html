@@ -6,6 +6,10 @@
      {% set social_link_class = "hero-social-link" %}
      {% include "partials/social-links.html" %}
    
+   To show text labels next to icons, set:
+     {% set social_show_labels = true %}
+     {% include "partials/social-links.html" %}
+   
    Defaults to "social-link" if no class is set.
 #}
 {% set social_links = load_data(path="data/social-links.yaml") %}
@@ -13,5 +17,6 @@
 {% for link in social_links.items %}
 <a href="{{ link.url }}" class="{{ link_class }}" target="_blank" rel="noopener noreferrer" aria-label="{{ link.name }}">
   {{ link.icon | safe }}
+  {%- if social_show_labels %}<span class="social-link-label">{{ link.name }}</span>{% endif %}
 </a>
 {% endfor %}

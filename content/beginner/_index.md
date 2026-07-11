@@ -7,50 +7,47 @@ Welcome to the Beginner Series! This course will take you from zero to your firs
 
 ## What You'll Learn
 
-- Understanding PCB components
-- Reading and creating schematics
-- Basic PCB layout techniques
-- Preparing files for manufacturing
+- EasyEDA Interface
+- Component import
+- Schematic wiring
+- Compoenent layout
+- PCB Routing
 
 ## Requirements
 
-No prior experience needed! This series is designed for absolute beginners. All you need is:
+This series is designed for absolute beginners. All you need is:
 
-- A computer with internet access
-- Basic computer skills (using a web browser)
-- Curiosity about electronics
+- Basic electronics knowledge - Resistors, Capacitors and Transistors
 
 ---
 
 ## Part 1: Introduction to PCB Design
 
-Your first step into the world of PCB design — understanding what PCBs are and why they matter.
+
+The bare minimum to get started
 
 {{ youtube(id="lZhL9xWfrn0") }}
 
-What is a PCB? Why are they essential in electronics? An overview of the PCB design process and an introduction to PCB design software.
-
----
-
-## Part 2: PCB Layout
-
-{{ youtube(id="R1keVfI1lrU") }}
-
-Diving deeper into PCB structure — copper traces, substrates, and the journey from schematic to manufactured board.
 
 ### Practice Exercise
 
 1. Sign up for a free account on [EasyEDA](https://easyeda.com)
-2. Open the schematic editor and load/draw a sample circuit
-3. Identify at least 5 different components
-4. Trace one signal path from input to output
+2. Download and Install EasyEDA Pro software
+3. Add compoents into schematic
+4. Wire up the compoennts in schematic
+
+---
+
+## Part 2: PCB Design
+
+Board outline, Compoenent Layout and PCB routing
+
+{{ youtube(id="R1keVfI1lrU") }}
 
 ### Resources
 
 {{ table(rows=[
-  ["Complete schematic for the demo circuit", "[schematic.pdf](schematic.pdf)"],
-  ["EasyEDA project files", "[layout.zip](layout.zip)"],
-  ["BOM with part numbers", "[bom.csv](bom.csv)"]
+  ["Heart Outline DXF", "[heart-outline.dxf](heart-outline.dxf)"]
 ]) }}
 
 ---

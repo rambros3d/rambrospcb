@@ -1,0 +1,11 @@
+/* Global custom styles */
+
+/* Light mode background color */
+:root {
+    --bg-color: #f0feff !important;
+}
+
+/* Dark mode - keep original dark background */
+[data-theme="dark"] {
+    --bg-color: #000b12 !important;
+}

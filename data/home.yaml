@@ -1,0 +1,31 @@
+# Homepage content
+# Access in templates via: load_data(path="data/home.yaml")
+
+hero_photo: "hero-photo.jpg"
+
+hero_tagline: "எண்ணம் போல் வாழ்க்கை"
+hero_description: |-
+  PCB Design is easy; My Knowledge is Free,
+  But your experience only comes with time
+
+tutorials_description: |-
+  Master the art of PCB design, go from absolute beginner to professional.
+  Dont pay for overpriced courses, just learn it for free.
+
+items:
+  - image: "tutorials/tutorial-beginner.jpg"
+    title: "Beginner Series"
+    description: "Start your PCB design journey here. Designed for absolute beginners with zero prior experience."
+    url: "@/beginner/_index.md"
+
+  - image: "tutorials/tutorial-intermediate.jpg"
+    title: "Intermediate Series"
+    description: "Take your designs to the next level. Learn advanced engineering, high-speed routing, and multi-layer stackups."
+    url: "@/intermediate/_index.md"
+    coming_soon: true
+
+about_photo: "hero-photo.jpg"
+about_description: |-
+  I have been designing PCBs for <strong>more than 6 years</strong>.
+  My boards are being used in 20+ countries across various industries.
+  My goal is <strong>simple</strong>, make PCB design easy for everyone.

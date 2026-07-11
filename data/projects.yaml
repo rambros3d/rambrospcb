@@ -1,0 +1,34 @@
+# Project Gallery - Single source of truth for homepage gallery
+# Access in templates via: data.projects
+# Place your project images in the static/ directory
+
+items:
+  - image: "portfolio/colorful-merry-go-round.jpg"
+    title: "Colorful Merry-Go-Round"
+    description: "Believe it or not, this is completely made up of PCBs"
+    url: "https://oshwlab.com/shreeramlive/rambros-carousel"
+
+  - image: "portfolio/blinking-heart-keychain.jpg"
+    title: "Blinking Heart Keychain"
+    description: "A heart-shaped PCB keychain that also blinks with the heart rhythm"
+    url: "https://oshwlab.com/shreeramlive/basic-led-blinky"
+
+  - image: "portfolio/microspora-motor-driver.jpeg"
+    title: "Microspora Motor Driver"
+    description: "A compact DRV8316-based motor driver board, now officially adopted by the SimpleFOC project"
+    url: "https://oshwlab.com/rambros/nano-8316-motor-driver"
+
+  - image: "portfolio/flexible-jellyfish.jpg"
+    title: "Flexible Jellyfish"
+    description: "An experimental art project to explore the flexibility of 'rigid' FR4 PCBs"
+    url: "https://oshwlab.com/shreeramlive/rambros-jelly"
+
+  - image: "portfolio/express-s2.jpg"
+    title: "Express S2"
+    description: "A minimal ESP32-S2 development board which I designed back in 2021"
+    url: "https://oshwlab.com/shreeramlive/tiny-s2_copy_copy"
+
+  - image: "portfolio/mikro-rc-controller.jpg"
+    title: "Mikro RC Controller"
+    description: "Controller for small rc models and robots. Motor drivers, 6 axis IMU, Battery management, and more"
+    url: "https://oshwlab.com/shreeramlive/mikro-rc"
