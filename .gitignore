@@ -21,5 +21,6 @@ themes/duckquill/.git
 # reference
 ref/
 
-#sgents
+# Hidden directories (allow .github for Actions)
 .*/
+!.github/
