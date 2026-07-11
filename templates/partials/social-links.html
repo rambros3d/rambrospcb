@@ -1,0 +1,17 @@
+{# Reusable social links partial
+   Loads social links from data/social-links.yaml using load_data()
+   Usage: {% include "partials/social-links.html" %}
+   
+   To customize the link class, set a variable before including:
+     {% set social_link_class = "hero-social-link" %}
+     {% include "partials/social-links.html" %}
+   
+   Defaults to "social-link" if no class is set.
+#}
+{% set social_links = load_data(path="data/social-links.yaml") %}
+{% set link_class = social_link_class | default(value="social-link") %}
+{% for link in social_links.items %}
+<a href="{{ link.url }}" class="{{ link_class }}" target="_blank" rel="noopener noreferrer" aria-label="{{ link.name }}">
+  {{ link.icon | safe }}
+</a>
+{% endfor %}

@@ -1,0 +1,87 @@
+# RamBros Research - Zola Configuration
+# "எண்ணம் போல் வாழ்க்கை" — Life as you think
+
+title = "RamBros Research"
+theme = "duckquill"
+base_url = "https://rambrosresearch.pages.dev"
+description = "Free PCB Design Tutorials - Learn PCB design from beginner to advanced"
+compile_sass = true
+minify_html = true
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+build_search_index = true
+default_language = "en"
+author = "RamBros Research"
+
+taxonomies = [{ name = "tags", feed = true }]
+
+
+
+[markdown]
+smart_punctuation = true
+bottom_footnotes = true
+
+[markdown.highlighting]
+render_code = true
+theme = "monokai"
+
+[search]
+index_format = "fuse_json"
+
+[extra]
+# Blue brand colors
+accent_color = "#448ff3"
+accent_color_dark = "#448ff3"
+
+# Default theme - dark for technical content
+default_theme = "dark"
+
+# Emoji favicon
+emoji_favicon = "🔌"
+
+# Features
+show_copy_button = true
+show_reading_time = true
+show_share_button = true
+show_backlinks = true
+go_to_top = true
+toc = true
+
+# Content Security Policy for YouTube/Vimeo embeds
+csp = [
+	{ directive = "font-src", domains = ["'self'"] },
+	{ directive = "img-src", domains = ["'self'", "https:", "data:"] },
+	{ directive = "media-src", domains = ["'self'", "https:"] },
+	{ directive = "script-src", domains = ["'self'"] },
+	{ directive = "style-src", domains = ["'self'", "'unsafe-inline'"] },
+	{ directive = "frame-src", domains = ["https://player.vimeo.com", "https://www.youtube-nocookie.com", "https://www.youtube.com"] },
+	{ directive = "connect-src", domains = ["'self'"] },
+	{ directive = "base-uri", domains = ["'none'"] },
+	{ directive = "form-action", domains = ["'none'"] }
+]
+
+# Navigation
+[extra.nav]
+show_feed = false
+show_theme_switcher = true
+show_repo = false
+
+links = [
+	{ name = "Resources", url = "@/resources/_index.md" }
+]
+
+# SEO & Social Sharing
+# Default OG image (1200x628 recommended) - used when no page-specific card is set
+card = "card.png"
+
+# Twitter handle for Twitter Card attribution
+twitter_handle = "RamBrosResearch"
+
+# Footer
+[extra.footer]
+show_copyright = true
+show_powered_by = true
+show_source = false
+copyright = "© 2026 RamBros Research. All rights reserved."
+
+

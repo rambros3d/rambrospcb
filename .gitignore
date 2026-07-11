@@ -1,0 +1,25 @@
+# Zola build output
+public/
+
+# Generated syntax highlighting CSS
+static/syntax-theme-*.css
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Submodule state
+themes/duckquill/.git
+
+# reference
+ref/
+
+#sgents
+.*/

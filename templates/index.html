@@ -1,0 +1,366 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="homepage-wrapper">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-image-container">
+      <img src="{{ get_url(path='hero-photo.jpg') }}" alt="Futuristic Printed Circuit Board" />
+    </div>
+    <div class="hero-text-container">
+      <h1>RamBros Research</h1>
+      <p class="hero-tagline">எண்ணம் போல் வாழ்க்கை</p>
+      <p class="hero-description">
+        Master the art of printed circuit board design from absolute beginner to industry professional.
+        Learn schematic capture, component selection, multi-layer routing, and manufacturing.
+      </p>
+      <div class="hero-links">
+        {% set social_link_class = "hero-social-link" %}
+        {% include "partials/social-links.html" %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Course Series Section -->
+  <div class="course-series-section">
+    <div class="section-title-container">
+      <h2>PCB பாடங்கள்</h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <div id="article-list" class="course-list">
+      <!-- Beginner Card -->
+      <article class="course-card">
+        <a href="{{ get_url(path='@/beginner/_index.md') }}"></a>
+        <div class="course-card-content">
+          <img src="{{ get_url(path='hero-photo.jpg') }}" class="course-card-image" alt="Beginner Course Thumbnail" />
+          <div class="course-card-text">
+            <h3>Beginner Series</h3>
+            <p>Start your PCB design journey here. Designed for absolute beginners with zero prior experience.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Intermediate Card -->
+      <article class="course-card coming-soon">
+        <a href="{{ get_url(path='@/intermediate/_index.md') }}"></a>
+        <div class="course-card-content">
+          <img src="{{ get_url(path='hero-photo.jpg') }}" class="course-card-image"
+            alt="Intermediate Course Thumbnail" />
+          <div class="course-card-text">
+            <h3>Intermediate Series</h3>
+            <p>Take your designs to the next level. Learn advanced engineering, high-speed routing, and multi-layer
+              stackups.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- General Resources Button -->
+    <div class="resources-button-container">
+      <a href="{{ get_url(path='@/resources/_index.md') }}" class="general-resources-button">General Resources</a>
+    </div>
+  </div>
+
+  <!-- About Me Section -->
+  <div class="about-section">
+    <div class="section-title-container">
+      <h2>About Me</h2>
+      <div class="title-underline"></div>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          I'm a PCB designer with <strong>6 years of hands-on experience</strong> designing circuit boards for real-world products. My boards are being used in <strong>20+ countries</strong> across various industries.
+        </p>
+        <p>
+          My goal is simple: <strong>make PCB design easy</strong> for everyone. Whether you're a complete beginner or an experienced engineer looking to level up, I'm here to guide you through every step of the process.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Hero Section Layout */
+  .hero-section {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 2.5rem;
+    margin-top: 0.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      padding: 1.5rem;
+      gap: 1.5rem;
+    }
+  }
+
+  .hero-image-container {
+    flex-shrink: 0;
+  }
+
+  .hero-image-container img {
+    width: 240px !important;
+    height: 240px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    box-shadow: var(--shadow-raised) !important;
+    border: none !important;
+    display: block !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-image-container img:hover {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-text-container h1 {
+    margin: 0 0 0.25rem 0;
+    font-size: var(--font-size-xx-large);
+    color: var(--accent-color);
+    font-weight: 500;
+    font-family: var(--font-antique);
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+    font-optical-sizing: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+  }
+
+  .hero-tagline {
+    font-size: var(--font-size-large);
+    font-weight: 600;
+    font-style: italic;
+    color: var(--fg-color);
+    opacity: 0.9;
+    margin: 0 0 1rem 0;
+  }
+
+  .hero-description {
+    margin: 0 0 1.5rem 0;
+    color: var(--fg-color);
+    opacity: 0.8;
+    line-height: 1.6;
+    font-size: var(--font-size-medium);
+  }
+
+  .hero-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .hero-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--fg-color);
+    background-color: var(--bg-color-2);
+    border: 1px solid var(--fg-muted-2);
+    transition: var(--transition);
+  }
+
+  .hero-social-link:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-raised);
+  }
+
+  .hero-social-link svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+  }
+
+  /* Section Title Layout */
+  .section-title-container {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title-container h2 {
+    font-size: var(--font-size-x-large);
+    color: var(--fg-color);
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+    font-family: var(--font-antique);
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+    font-optical-sizing: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+  }
+
+  .title-underline {
+    width: 4rem;
+    height: 0.25rem;
+    background-color: var(--accent-color);
+    margin: 0 auto;
+    border-radius: 999px;
+  }
+
+  /* Course List Cards Layout */
+  .course-list {
+    margin-block-start: 0 !important;
+  }
+
+  .course-card {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    height: 140px !important;
+  }
+
+  .course-card a {
+    border-radius: 0 !important;
+  }
+
+  .course-card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+  }
+
+  @media (max-width: 580px) {
+    .course-card {
+      height: auto !important;
+    }
+
+    .course-card-content {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .course-card-image {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 4 / 3 !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      border-right: none !important;
+      border-bottom: 1px solid var(--fg-muted-2) !important;
+    }
+  }
+
+  .course-card-image {
+    width: 187px !important;
+    height: 140px !important;
+    aspect-ratio: 4 / 3 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    flex-shrink: 0 !important;
+    border: none !important;
+    border-right: 1px solid var(--fg-muted-2) !important;
+    transition: var(--transition);
+  }
+
+  .course-card:hover .course-card-image {
+    border-color: var(--accent-color) !important;
+  }
+
+  .resources-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .general-resources-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 2.25rem;
+    font-family: var(--font-system-ui);
+    font-weight: 600;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    border-radius: var(--rounded-corner-small);
+    background-color: transparent;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .general-resources-button:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-raised);
+  }
+
+  .general-resources-button:active {
+    transform: translateY(0);
+  }
+
+  .course-card-text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .course-card-text h3 {
+    margin: 0 0 0.35rem 0 !important;
+    font-size: var(--font-size-large);
+  }
+
+  .course-card-text p {
+    margin: 0 !important;
+    color: var(--fg-color);
+    opacity: 0.75;
+    line-height: 1.5;
+    font-size: var(--font-size-small);
+  }
+
+  /* About Section */
+  .about-section {
+    margin-top: 4rem;
+    padding: 2rem 0;
+  }
+
+  .about-content {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .about-text p {
+    color: var(--fg-color);
+    opacity: 0.85;
+    line-height: 1.7;
+    font-size: var(--font-size-medium);
+    margin: 0 0 1rem 0;
+  }
+
+  .about-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-text strong {
+    color: var(--accent-color);
+    font-weight: 600;
+  }
+</style>
+{% endblock content %}
