@@ -2,6 +2,7 @@ backend:
   name: github
   repo: rambros3d/rambrospcb
   branch: main
+  base_url: https://sveltia-cms-auth.rambrosteam.workers.dev
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
