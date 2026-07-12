@@ -23,6 +23,12 @@ load_data(path="data/home.yaml") %}
         </div>
     </div>
 
+    <!-- Info Section -->
+    <div class="info-section">
+        <h2>{{ home.info_header }}</h2>
+        <p>{{ home.info_description | linebreaksbr | safe }}</p>
+    </div>
+
     <!-- Course Series Section -->
     <div class="course-series-section">
         <div class="section-title-container">
@@ -62,6 +68,23 @@ load_data(path="data/home.yaml") %}
                 class="general-resources-button"
                 >General Resources</a
             >
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    {% set faq = load_data(path="data/faq.yaml") %}
+    <div class="faq-section">
+        <div class="section-title-container">
+            <h2>FAQ</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="faq-list">
+            {% for item in faq.items %}
+            <div class="faq-item">
+                <h3 class="faq-question">{{ item.question }}</h3>
+                <p class="faq-answer">{{ item.answer | linebreaksbr | safe }}</p>
+            </div>
+            {% endfor %}
         </div>
     </div>
 
@@ -294,6 +317,28 @@ load_data(path="data/home.yaml") %}
         }
     }
 
+    /* Info Section */
+    .info-section {
+        background-color: var(--accent-color-alpha);
+        border: 1px solid var(--accent-color);
+        padding: 1.5rem 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .info-section h2 {
+        font-size: var(--font-size-large);
+        color: var(--accent-color);
+        margin: 0 0 0.5rem 0;
+        font-weight: 600;
+    }
+
+    .info-section p {
+        color: var(--fg-color);
+        opacity: 0.85;
+        line-height: 1.6;
+        margin: 0;
+    }
+
     /* Section Title Layout */
     .section-title-container {
         text-align: center;
@@ -445,6 +490,48 @@ load_data(path="data/home.yaml") %}
         opacity: 0.75;
         line-height: 1.5;
         font-size: var(--font-size-small);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+        margin-top: 4rem;
+        padding: 2rem 0;
+    }
+
+    .faq-list {
+        max-width: 640px;
+        margin: 0 auto;
+        counter-reset: faq-counter;
+    }
+
+    .faq-item {
+        padding: 1.25rem 0;
+        border-bottom: 1px solid var(--fg-muted-2);
+        counter-increment: faq-counter;
+    }
+
+    .faq-item:first-of-type {
+        border-top: 1px solid var(--fg-muted-2);
+    }
+
+    .faq-question {
+        margin: 0 0 0.5rem 0;
+        font-weight: 600;
+        color: var(--fg-color);
+        font-size: var(--font-size-medium);
+    }
+
+    .faq-question::before {
+        content: counter(faq-counter) ". ";
+        color: var(--accent-color);
+    }
+
+    .faq-answer {
+        padding-left: 1.5rem;
+        color: var(--fg-color);
+        opacity: 0.8;
+        line-height: 1.6;
+        margin: 0;
     }
 
     /* About Section */

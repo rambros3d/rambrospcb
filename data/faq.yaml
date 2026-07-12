@@ -1,0 +1,13 @@
+# FAQ content
+# Access in templates via: load_data(path="data/faq.yaml")
+
+items:
+  - question: "Is it really free?"
+    answer: |-
+      Remember kids, <strong>good things in life are always free!</strong>
+      Students already waste too much money on schools and colleges for worthless 'qualifications', So dont waste money on courses also.
+
+  - question: "How did you learn PCB design?"
+    answer: |-
+      I learnt everything from the Internet and forums.
+      Check out the <a href="/resources/">Resources Section</a> for my favorite channels.

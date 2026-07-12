@@ -5,11 +5,15 @@ hero_photo: "hero-photo.jpg"
 
 hero_tagline: "எண்ணம் போல் வாழ்க்கை"
 hero_description: |-
-  PCB Design is easy; My Knowledge is Free,
-  But your experience only comes with time
+  Master the art of PCB design,
+  Go from absolute beginner to professional.
+
+info_header: "You can also design a PCB"
+info_description: |-
+  PCB Design is easy, My Knowledge is Free,
+  But your experience only comes with time.
 
 tutorials_description: |-
-  Master the art of PCB design, go from absolute beginner to professional.
   Dont pay for overpriced courses, just learn it for free.
 
 items:
@@ -24,8 +28,7 @@ items:
     url: "@/intermediate/_index.md"
     coming_soon: true
 
-about_photo: "hero-photo.jpg"
+about_photo: "aboutme.jpg"
 about_description: |-
   I have been designing PCBs for <strong>more than 6 years</strong>.
-  My boards are being used in 20+ countries across various industries.
-  My goal is <strong>simple</strong>, make PCB design easy for everyone.
+  My boards are being used in <strong>20+ countries</strong> across various industries.
