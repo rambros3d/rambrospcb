@@ -1,0 +1,131 @@
+media: static/uploads
+
+content:
+  - name: homepage
+    label: Homepage
+    type: file
+    path: content/_index.md
+    format: toml-frontmatter
+    fields:
+      - name: title
+        type: string
+      - name: description
+        type: string
+      - name: body
+        type: rich-text
+
+  - name: beginner
+    label: Beginner Tutorials
+    type: collection
+    path: content/beginner
+    format: toml-frontmatter
+    exclude: ["_index.md"]
+    fields:
+      - name: title
+        type: string
+      - name: description
+        type: string
+      - name: template
+        type: string
+      - name: date
+        type: date
+      - name: tags
+        type: string
+        list: true
+      - name: weight
+        type: number
+      - name: draft
+        type: boolean
+      - name: body
+        type: rich-text
+
+  - name: beginner-index
+    label: Beginner Section Index
+    type: file
+    path: content/beginner/_index.md
+    format: toml-frontmatter
+    fields:
+      - name: title
+        type: string
+      - name: description
+        type: string
+      - name: body
+        type: rich-text
+
+  - name: intermediate
+    label: Intermediate Tutorials
+    type: collection
+    path: content/intermediate
+    format: toml-frontmatter
+    exclude: ["_index.md"]
+    fields:
+      - name: title
+        type: string
+      - name: description
+        type: string
+      - name: template
+        type: string
+      - name: date
+        type: date
+      - name: tags
+        type: string
+        list: true
+      - name: weight
+        type: number
+      - name: draft
+        type: boolean
+      - name: body
+        type: rich-text
+
+  - name: intermediate-index
+    label: Intermediate Section Index
+    type: file
+    path: content/intermediate/_index.md
+    format: toml-frontmatter
+    fields:
+      - name: title
+        type: string
+      - name: description
+        type: string
+      - name: template
+        type: string
+      - name: body
+        type: rich-text
+
+  - name: resources
+    label: Resources
+    type: collection
+    path: content/resources
+    format: toml-frontmatter
+    exclude: ["_index.md"]
+    fields:
+      - name: title
+        type: string
+      - name: description
+        type: string
+      - name: template
+        type: string
+      - name: date
+        type: date
+      - name: tags
+        type: string
+        list: true
+      - name: weight
+        type: number
+      - name: draft
+        type: boolean
+      - name: body
+        type: rich-text
+
+  - name: resources-index
+    label: Resources Section Index
+    type: file
+    path: content/resources/_index.md
+    format: toml-frontmatter
+    fields:
+      - name: title
+        type: string
+      - name: description
+        type: string
+      - name: body
+        type: rich-text
