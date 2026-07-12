@@ -27,11 +27,14 @@ collections:
 
   - name: "beginner-index"
     label: "Beginner Section Index"
-    file: "content/beginner/_index.md"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
+    files:
+      - name: "beginner-index"
+        label: "Beginner Section Index"
+        file: "content/beginner/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
 
   - name: "intermediate"
     label: "Intermediate Tutorials"
@@ -51,12 +54,15 @@ collections:
 
   - name: "intermediate-index"
     label: "Intermediate Section Index"
-    file: "content/intermediate/_index.md"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Template", name: "template", widget: "string", required: false }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
+    files:
+      - name: "intermediate-index"
+        label: "Intermediate Section Index"
+        file: "content/intermediate/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Template", name: "template", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
 
   - name: "resources"
     label: "Resources"
@@ -76,8 +82,11 @@ collections:
 
   - name: "resources-index"
     label: "Resources Section Index"
-    file: "content/resources/_index.md"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
+    files:
+      - name: "resources-index"
+        label: "Resources Section Index"
+        file: "content/resources/_index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
