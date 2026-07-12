@@ -13,7 +13,6 @@ collections:
     folder: "content/beginner"
     create: true
     slug: "{{slug}}"
-    preview_path: "beginner/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
@@ -23,24 +22,12 @@ collections:
       - { label: "Weight", name: "weight", widget: "number", required: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-
-  - name: "beginner-index"
-    label: "Beginner Section Index"
-    files:
-      - name: "beginner-index"
-        label: "Beginner Section Index"
-        file: "content/beginner/_index.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string", required: false }
-          - { label: "Body", name: "body", widget: "markdown", required: false }
 
   - name: "intermediate"
     label: "Intermediate Tutorials"
     folder: "content/intermediate"
     create: true
     slug: "{{slug}}"
-    preview_path: "intermediate/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
@@ -50,25 +37,12 @@ collections:
       - { label: "Weight", name: "weight", widget: "number", required: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-
-  - name: "intermediate-index"
-    label: "Intermediate Section Index"
-    files:
-      - name: "intermediate-index"
-        label: "Intermediate Section Index"
-        file: "content/intermediate/_index.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string", required: false }
-          - { label: "Template", name: "template", widget: "string", required: false }
-          - { label: "Body", name: "body", widget: "markdown", required: false }
 
   - name: "resources"
     label: "Resources"
     folder: "content/resources"
     create: true
     slug: "{{slug}}"
-    preview_path: "resources/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
@@ -78,14 +52,3 @@ collections:
       - { label: "Weight", name: "weight", widget: "number", required: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown", required: false }
-
-  - name: "resources-index"
-    label: "Resources Section Index"
-    files:
-      - name: "resources-index"
-        label: "Resources Section Index"
-        file: "content/resources/_index.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string", required: false }
-          - { label: "Body", name: "body", widget: "markdown", required: false }
