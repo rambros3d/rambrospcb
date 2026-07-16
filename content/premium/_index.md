@@ -2,6 +2,7 @@
 title = "Ultimate Premium Course"
 description = "World's most advanced PCB design course - because why not?"
 template = "section_no_title.html"
+card = "premium-og.png"
 +++
 
 <style>
