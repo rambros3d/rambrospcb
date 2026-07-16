@@ -1,5 +1,6 @@
 {%- set rel_attributes = macros_rel_attributes::rel_attributes() | trim -%}
 {%- set social_links = load_data(path="data/social-links.yaml") -%}
+{%- set home = load_data(path="data/home.yaml") -%}
 
 <footer id="site-footer">
 	{%- if config.extra.footer.links %}
@@ -41,7 +42,9 @@
 	{%- endif %}
 
 	{%- if config.extra.footer.show_copyright %}
-		{%- if config.extra.footer.copyright %}
+		{%- if home.footer_tagline %}
+			<p>{{ home.footer_tagline | markdown | safe }}</p>
+		{%- elif config.extra.footer.copyright %}
 			{{ config.extra.footer.copyright | markdown | safe }}
 		{%- else %}
 			<p>&copy; {{ config.title }}, {{ now() | date(format="%Y") }}</p>

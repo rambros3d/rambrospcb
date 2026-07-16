@@ -2,12 +2,27 @@
 # Access in templates via: load_data(path="data/faq.yaml")
 
 items:
+  - question: "I finished your tutorial, I have a doubt"
+    answer: |-
+      Just ask in the <strong>comments section</strong> of Youtube.
+      In some cases, I might even create a new Video tutorial to address them.
+
   - question: "Is it really free?"
     answer: |-
       Remember kids, <strong>good things in life are always free!</strong>
       Students already waste too much money on schools and colleges for worthless 'qualifications', So dont waste money on courses also.
 
+  #  - question: "Do you offer paid classes?"
+  #    answer: |-
+  #      I'm a <strong>PCB designer, not a teacher.</strong>
+  #      Paid mentorships might feel like a 'consultation'.
+  #      So all the educational content will be 100% free.
+
   - question: "How did you learn PCB design?"
     answer: |-
       I learnt everything from the Internet and forums.
       Check out the <a href="/resources/">Resources Section</a> for my favorite channels.
+
+  - question: "Can you design my board?"
+    answer: |-
+      When you have an impossible project, you should definitely contact me.

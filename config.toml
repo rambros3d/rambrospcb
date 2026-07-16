@@ -1,7 +1,7 @@
 # RamBros Research - Zola Configuration
 # "எண்ணம் போல் வாழ்க்கை" — Life as you think
 
-title = "RamBros Research"
+title = "RamBros"
 theme = "duckquill"
 base_url = "https://pcb.rambros3d.com/"
 description = "Free PCB Design Tutorials - Learn PCB design from beginner to advanced"
@@ -83,6 +83,4 @@ twitter_handle = "RamBrosResearch"
 show_copyright = true
 show_powered_by = true
 show_source = false
-copyright = "© 2026 RamBros Research. All rights reserved."
-
-
+copyright = "~ Goods things in Life are always free ~"
