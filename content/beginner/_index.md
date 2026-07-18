@@ -1,9 +1,9 @@
 +++
-title = 'Beginner Series'
-description = 'Start your PCB design journey - perfect for absolute beginners'
-date = '2026-07-18'
+title = "Beginner Series"
+description = "Start your PCB design journey - perfect for absolute beginners"
 draft = false
 +++
+
 Welcome to the Beginner Series!
 In this tutorial, you will learn to design a simple PCB for the reference schematic.
 
@@ -100,4 +100,3 @@ You have successfully designed your first PCB, now order and test it yourself.
 - Expect extra 1-2K INR for customs, this is extortion by India Government.
 
 ---
-

@@ -18,7 +18,7 @@ content:
     delimiters: "+++"
     view:
       primary: title
-      sort: date
+      sort: weight
       order: desc
     fields:
       - name: title
@@ -28,8 +28,6 @@ content:
         type: text
       - name: template
         type: string
-      - name: date
-        type: date
       - name: tags
         type: string
         list: true
