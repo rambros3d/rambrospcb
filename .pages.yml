@@ -1,0 +1,41 @@
+media:
+  input: content
+  output: /
+  rename: safe
+  exclude:
+    - _index.md
+
+content:
+  - name: content
+    label: Content
+    type: collection
+    path: content
+    subfolders: true
+    exclude:
+      - /premium/**
+      - /_index.md
+    format: toml-frontmatter
+    delimiters: "+++"
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: description
+        type: text
+      - name: template
+        type: string
+      - name: date
+        type: date
+      - name: tags
+        type: string
+        list: true
+      - name: weight
+        type: number
+      - name: draft
+        type: boolean
+      - name: body
+        type: rich-text
