@@ -1,7 +1,11 @@
 {%- if page.extra.card -%}
 	{{ get_url(path=page.colocated_path ~ page.extra.card) }}
 {%- elif section.extra.card -%}
-	{{ get_url(path=section.colocated_path ~ section.extra.card) }}
+	{% if section.path %}
+		{{ get_url(path=section.path ~ section.extra.card) }}
+	{% else %}
+		{{ get_url(path=section.extra.card) }}
+	{% endif %}
 {%- elif page.extra.banner -%}
 	{%- set card = resize_image(path=page.colocated_path ~ page.extra.banner, width=1200, height=628, op="fill") -%}
 	{{ card.url }}
