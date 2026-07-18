@@ -1,8 +1,9 @@
 +++
-title = "Beginner Series"
-description = "Start your PCB design journey - perfect for absolute beginners"
+title = 'Beginner Series'
+description = 'Start your PCB design journey - perfect for absolute beginners'
+date = '2026-07-18'
+draft = false
 +++
-
 Welcome to the Beginner Series! This course will take you from zero to your first PCB design.
 
 ## What You'll Learn
@@ -23,11 +24,9 @@ This series is designed for absolute beginners. All you need is:
 
 ## Part 1: Introduction to PCB Design
 
-
 The bare minimum to get started
 
 {{ youtube(id="lZhL9xWfrn0") }}
-
 
 ### Practice Exercise
 
@@ -51,5 +50,9 @@ Board outline, Compoenent Layout and PCB routing
 ]) }}
 
 ---
+
+
+
+Y7J8eKkeWhQ
 
 *More parts coming soon!*
