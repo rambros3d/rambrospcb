@@ -6,6 +6,8 @@ template = "section.html"
 
 Take your PCB design skills to the next level.
 
+<img src="/intermediate/miki.jpg" alt="Intermediate PCB Tutorial Thumbnail" style="max-width: 60%;" decoding="async" loading="lazy" />
+
 ## Coming Soon!
 
 - Circuit Design from scratch

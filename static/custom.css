@@ -9,3 +9,20 @@
 [data-theme="dark"] {
     --bg-color: #000b12 !important;
 }
+
+/* Disable zoom-on-hover for all images */
+img:not(.emoji) {
+    cursor: default !important;
+}
+
+img:not(.emoji):hover {
+    transform: none !important;
+    position: static !important;
+    z-index: auto !important;
+    box-shadow: var(--edge-highlight), var(--shadow) !important;
+    border-radius: var(--rounded-corner) !important;
+}
+
+a img:not(.emoji) {
+    cursor: pointer !important;
+}

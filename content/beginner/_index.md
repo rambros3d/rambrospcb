@@ -7,6 +7,8 @@ draft = false
 Welcome to the Beginner Series!
 In this tutorial, you will learn to design a simple PCB for the reference schematic.
 
+<img src="/beginner/heart-pcb.jpg" alt="Beginner PCB Tutorial Thumbnail" style="max-width: 60%;" decoding="async" loading="lazy" />
+
 ## What You'll Learn
 
 - EasyEDA Interface
@@ -17,9 +19,10 @@ In this tutorial, you will learn to design a simple PCB for the reference schema
 
 ## Requirements
 
-This series is designed for absolute beginners. All you need is:
+This series is designed for absolute beginners. All you need to know is:
 
-- Basic electronics knowledge - Resistors, Capacitors and Transistors
+- Electronics - Resistors, Capacitors and Transistors
+- Basic schematic - Ability to read an interpret schematics
 
 ---
 
@@ -84,7 +87,7 @@ Board outline, Compoenent Layout and PCB routing
 
 You have successfully designed your first PCB, now order and test it yourself.
 
-`[Video coming soon]`
+{{ youtube(id="4SAFcLJZraI") }}
 
 ### To do:
 
@@ -93,8 +96,12 @@ You have successfully designed your first PCB, now order and test it yourself.
 3. Confirm components placement
 4. Review and Place order
 
-### Notes:
 
+<a href="https://u.easyeda.com/account/user/coupon/activating?uuid=0c9291b317fd414bbc4c7d35229c4a4f" target="_blank" rel="noopener noreferrer">
+  <img src="/beginner/15coupon.png" alt="$15 JLCPCB Coupon" style="max-width: 60%;" decoding="async" loading="lazy" />
+</a>
+
+### Notes:
 - Get my [SPECIAL coupon](https://u.easyeda.com/account/user/coupon/activating?uuid=0c9291b317fd414bbc4c7d35229c4a4f) to get **$15** discount in JLCPCB.
 - Select EPOST or Registered Air mail for shipping.
 - Expect extra 1-2K INR for customs, this is extortion by India Government.
