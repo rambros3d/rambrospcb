@@ -10,19 +10,32 @@
     --bg-color: #000b12 !important;
 }
 
-/* Disable zoom-on-hover for all images */
-img:not(.emoji) {
+/* Disable all hover behaviors for ALL images */
+img {
+    transition: none !important;
     cursor: default !important;
 }
 
-img:not(.emoji):hover {
+img:hover {
     transform: none !important;
     position: static !important;
     z-index: auto !important;
-    box-shadow: var(--edge-highlight), var(--shadow) !important;
-    border-radius: var(--rounded-corner) !important;
+    opacity: 1 !important;
+    filter: none !important;
+    clip-path: none !important;
 }
 
-a img:not(.emoji) {
+a img {
     cursor: pointer !important;
+}
+
+a img:hover {
+    cursor: pointer !important;
+}
+
+/* Remove popup hover effect from social buttons */
+.hero-social-link:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
 }

@@ -5,7 +5,7 @@ items:
   - question: "I finished your tutorial, I have a doubt"
     answer: |-
       Just ask in the <strong>comments section</strong> of Youtube.
-      In some cases, I might even create a new Video tutorial to address them.
+      In some cases, I might even create a new Video tutorial to clarify them.
 
   - question: "Is it really free?"
     answer: |-
@@ -21,7 +21,7 @@ items:
   - question: "How did you learn PCB design?"
     answer: |-
       I learnt everything from the Internet and forums.
-      Check out the <a href="/resources/">Resources Section</a> for my favorite channels.
+      Check out the <a href="/resources/">Resources Section</a> for my favorite creators.
 
   - question: "Can you design my board?"
     answer: |-

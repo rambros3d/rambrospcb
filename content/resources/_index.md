@@ -23,7 +23,7 @@ Specific tutorial resources are available on their respective **tutorial series*
 
 ---
 
-## My favorite channels
+## My favorite creators
 
 <div class="channel-cards">
 
