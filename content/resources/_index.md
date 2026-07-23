@@ -27,6 +27,14 @@ Specific tutorial resources are available on their respective **tutorial series*
 
 <div class="channel-cards">
 
+<a href="https://www.youtube.com/@ELECTRONOOBS" class="channel-card" target="_blank" rel="noopener">
+  <img src="/channels/electronoobs.jpg" alt="Electronoobs" class="channel-avatar">
+  <div class="channel-info">
+    <h3 class="channel-name">Electronoobs</h3>
+    <p class="channel-desc">Easy to understand beginner tutorials</p>
+  </div>
+</a>
+
 <a href="https://www.youtube.com/@RobertFeranec" class="channel-card" target="_blank" rel="noopener">
   <img src="/channels/robert-feranec.jpg" alt="Robert Feranec" class="channel-avatar">
   <div class="channel-info">
@@ -48,14 +56,6 @@ Specific tutorial resources are available on their respective **tutorial series*
   <div class="channel-info">
     <h3 class="channel-name">GreatScott!</h3>
     <p class="channel-desc">Electronics explained and beginner-friendly projects</p>
-  </div>
-</a>
-
-<a href="https://www.youtube.com/@ELECTRONOOBS" class="channel-card" target="_blank" rel="noopener">
-  <img src="/channels/electronoobs.jpg" alt="Electronoobs" class="channel-avatar">
-  <div class="channel-info">
-    <h3 class="channel-name">Electronoobs</h3>
-    <p class="channel-desc">Easy to understand beginner tutorials</p>
   </div>
 </a>
 

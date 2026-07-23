@@ -93,7 +93,7 @@ extra.card = "premium-og.png"
     <div style="background: var(--accent-color); color: var(--contrast-color); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 900; flex-shrink: 0;">#1</div>
     <div>
         <p style="color: var(--fg-color); margin: 0 0 0.25rem 0; font-weight: 700; font-size: 1.1rem;">Top-Rated PCB Course on the Internet</p>
-        <p style="color: var(--fg-color); opacity: 0.75; margin: 0; font-size: 0.9rem;">Rated 10/10 by more than 100 million students worldwide</p>
+        <p style="color: var(--fg-color); opacity: 0.75; margin: 0; font-size: 0.9rem;">Rated 10/10 by more than 10 Crore students worldwide</p>
     </div>
 </div>
 
@@ -163,7 +163,7 @@ extra.card = "premium-og.png"
 
 <div class="premium-guarantee" style="background: var(--accent-color-alpha); border: 3px solid var(--accent-color); padding: 2rem; margin: 2rem 0; text-align: center;">
     <h2 style="color: var(--fg-color); margin: 0 0 1rem 0;">🚨 10-Day Electric Guarantee 🚨</h2>
-    <p style="color: var(--fg-color); opacity: 0.8; margin: 0 0 1rem 0;">If you can't design a <strong style="color: var(--accent-color);">64-layer motherboard</strong> within <strong style="color: var(--accent-color);">10 days</strong> after taking this course, I will personally refund every rupee. No questions asked.</p>
+    <p style="color: var(--fg-color); opacity: 0.8; margin: 0 0 1rem 0;">If you can't design a <strong style="color: var(--accent-color);">200-layer motherboard</strong> within <strong style="color: var(--accent-color);">10 days</strong> after taking this course, I will personally refund every rupee. No questions asked.</p>
 </div>
 
 <div class="premium-disclaimer" style="background: var(--fg-muted-1); border: 1px solid var(--border-color); padding: 1.5rem; margin-top: 2rem;">

@@ -68,7 +68,8 @@ show_theme_switcher = true
 show_repo = false
 
 links = [
-	{ name = "Resources", url = "@/resources/_index.md" }
+	{ name = "Resources", url = "@/resources/_index.md" },
+	{ name = "Collaborate", url = "@/promotion/_index.md" }
 ]
 
 # SEO & Social Sharing
