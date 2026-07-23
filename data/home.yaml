@@ -4,6 +4,10 @@
 hero_photo: "hero-photo.jpg"
 
 hero_tagline: "எண்ணம் போல் வாழ்க்கை"
+telegram_button:
+  text: "Join Telegram Group"
+  url: "https://t.me/rambrospcb"
+
 hero_description: |-
   Master the art of PCB design,
   Go from absolute beginner to professional.
