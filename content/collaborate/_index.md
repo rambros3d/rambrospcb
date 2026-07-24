@@ -36,9 +36,10 @@ If you want to flex your production capabilities, You can also give me a tour of
 ---
 
 ## Non-negotiable
-- As a educational creator, I wont include irrelevant Sponsored content inside tutorials.
+- Product promotions will never be placed inside tutorials.
+- Promotional content will be published separately.
 
-#### To avoid conflict of interest, **I do not accept cash payments in exchange for promotions**. No exceptions.
+#### To avoid conflict of interest, **I do not accept payments in exchange for promotions**. No exceptions.
 
 
 ---
