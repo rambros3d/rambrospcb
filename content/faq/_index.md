@@ -5,43 +5,44 @@ draft = false
 extra.toc = true
 +++
 
-### **Where can I find your FREE tutorials?**
-- Beginner Series
-- Intermediate Series
+### **Where can I find your tutorials?**
+All tutorials are FREE - [available on youtube](https://www.youtube.com/@rambrosresearch/courses)
+1. Beginner Series 
+1. Intermediate Series
+1. *Advanced Series - coming soon!*
 
-<h3>How to start PCB design, what is the roadmap?</h3>
-Start with the Beginner Series. You will level up with every new project - Thats all, No special method.
+#### I watched your tutorial, I have a doubt
 
-<h3>What are the requirements?</h3>
-You can start PCB designer if you know the basic electronics like resistors, capacitors & transistors.
-
-> PCB design is same as using breadboard, but instead you will do the connections in the PCB software.
-
-<h3>I watched your tutorial, I have a doubt</h3>
-
-Just ask in the **comments section** of YouTube.
-In some cases, I might even create a new Video tutorial to clarify them.
-
-You can also join our 
+- Just ask in the **comments section** of YouTube.
+In some cases, I might even create a new Video to clarify them.
+- You can also join our 
 [Telegram Group](https://t.me/rambrospcb) - we have many professional PCB designers there.
 
-> Please **don't use dm** for PCB doubts.
+<h4> <b> <<<< Please dont ask in dm for PCB doubts >>>> </b> </h4>
+
+---
+
+#### How to start PCB design, what is the roadmap?
+- Start with the Beginner Series.
+- You skills will level up with every board you make - Thats all, No secret techniques.
+
+#### What are the requirements?
+- You can start PCB design if you know the basic electronics like resistors, capacitors & transistors.
+- PCB design is same as using breadboard, but instead you will do the connections in the EDA software.
 
 ---
 
 ### **Can you design my board?**
-
-Yeah absolutely.
+- Yeah.
 And if you have an impossible project, you should definitely contact me.
+- Email me the clear requirements of your board (board features, size, shape,etc), I will get in touch.
 
-Email me the clear requirements of your board (board features, size, shape,etc), I will get in touch.
-
-Email: [shreeram@twynfish.com](mailto:shreeram@twynfish.com)
+> Email: [shreeram@twynfish.com](mailto:shreeram@twynfish.com)
 
 ---
 
-### **Do you accept collaborations?**
-
+### **Lets Collaborate?**
+Fellow Creators, Brands and Companies ->
 See here for more info - [Collaborate With Us](https://pcb.rambros3d.com/collaborate)
 
  ---
