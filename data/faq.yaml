@@ -18,11 +18,6 @@ items:
   #      Paid mentorships might feel like a 'consultation'.
   #      So all the educational content will be 100% free.
 
-  - question: "How did you learn PCB design?"
-    answer: |-
-      I learnt everything from the Internet and forums.
-      Check out the <a href="/resources/">Resources Section</a> for my favorite creators.
-
   - question: "Can you design my board?"
     answer: |-
       Yeah absolutely.
