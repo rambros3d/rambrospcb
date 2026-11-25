@@ -152,7 +152,7 @@ Turn a routed PCB into a repeatable, manufacturable product—and learn when adv
 2. **Signal Integrity & Current:** Check crosstalk spacing, via drill limits, IPC-2221 trace current capacity, SPI length matching (and when speeds justify it), and $90\ \Omega$ USB coplanar differential-pair routing (`Alt+D` arc routing)
 3. **Mechanical & Fabrication (DFM):** Eliminate copper voids, balance copper distribution to reduce board warpage, add $2\text{ mm}$ CNC corner radii, and stitch ground planes with vias every $3\text{ mm}$
 4. **Assembly & Panelization (DFA):** Add edge rails, $1\text{ mm}$ / $2\text{ mm}$ fiducials, evaluate $0.6\text{ mm}$ mouse bites vs. V-cut, watch component centre-of-gravity overhangs, and factor in double-sided reflow fixture costs
-5. **Testing Economics (DFT):** Compare flying-probe vs. ICT bed-of-nails test fixtures (e.g., weighing a $\$250$ fixture against a $200$-unit batch at $\approx 0.5\%$ defect rate versus mandatory ICT for high-volume consumer products)
+5. **Testing Economics (DFT):** Compare flying-probe vs. ICT bed-of-nails test fixtures (e.g., weighing fixture cost against batch size and defect rate versus mandatory ICT for high-volume consumer products)
 6. **Final Polish:** Clean up overlapping footprint silkscreen labels and run a final DRC before exporting production Gerbers, BOM, and CPL
 
 ---
