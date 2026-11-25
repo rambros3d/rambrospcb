@@ -32,6 +32,10 @@ items:
     url: "@/intermediate/_index.md"
     coming_soon: true
 
+  - image: "intermediate/miki.jpg"
+    title: "Advanced Series"
+    description: "Design a production-ready 4-layer ESP32-S3 hardware product (RK-ULTRA) from requirements to DFM/DFA/DFT."
+    url: "@/advanced/_index.md"
 about_photo: "aboutme.jpg"
 about_description: |-
   I have been designing PCBs for <strong>more than 6 years</strong>.
