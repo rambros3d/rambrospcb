@@ -163,4 +163,4 @@ Once your DFM, DFA, and DRC checks pass, order a small prototype run (5–10 boa
 
 ### Notes
 
-* Have a design or manufacturing question? Drop it in the **YouTube comments** or ask in our **Telegram Group** (see the [FAQ](/faq/) for the invite link—please avoid DMs for PCB doubts).
+* Have a design or manufacturing question? Drop it in the **YouTube comments** or ask in our [**Telegram Group**](https://t.me/rambrospcb) (see the [FAQ](/faq/) for the invite link—please avoid DMs for PCB doubts).
