@@ -43,13 +43,6 @@ Decide what the board needs to do and pick the right parts before opening the sc
 3. Compare Basic vs. Extended parts, stock levels, and pricing to finalize your Bill of Materials (BOM)
 4. <!-- TODO: Add any Part 1 specific project milestone (e.g., exact MCU/sensor chosen in #I1) -->
 
-### Resources
-
-| | |
-| --- | --- |
-| Full Playlist | [YouTube Playlist](https://www.youtube.com/playlist?list=PLZzWPN5JrAkE) |
-| Component Search | [JLCPCB Parts Library](https://jlcpcb.com/parts) |
-| Parametric Search | [LCSC Electronics](https://www.lcsc.com/) |
 
 ---
 
@@ -69,11 +62,6 @@ What to do when a component you want isn't available in the default EasyEDA libr
 4. Link the Symbol and Footprint into a single reusable component and double-check pin-to-pad mapping
 5. <!-- TODO: Specify the exact component built in #I2 -->
 
-### Resources
-
-| | |
-| --- | --- |
-| Component Datasheet | <!-- TODO: Add link/filename for the datasheet used in #I2 --> |
 
 ---
 
@@ -92,11 +80,6 @@ Stop guessing pin connections and capacitor values—learn how to pull the exact
 3. Find the **Typical Application Circuit** and note required passive components (decoupling capacitors, pull-up resistors, etc.)
 4. Check layout guidelines and thermal/mechanical notes before moving to schematic capture
 
-### Resources
-
-| | |
-| --- | --- |
-| Reference Datasheet(s) | <!-- TODO: Add links/filenames for the MCU & sensor datasheets reviewed in #I3 --> |
 
 ---
 
@@ -116,11 +99,6 @@ Turn your datasheet notes and selected parts into a clean, readable, and error-f
 4. Run an **Electrical Rule Check (ERC)** and resolve any warnings before converting to PCB
 5. <!-- TODO: Add any Part 4 specific step or sub-circuit covered in #I4 -->
 
-### Resources
-
-| | |
-| --- | --- |
-| Reference Schematic / Project Files | <!-- TODO: Add link to final schematic image or OSHWLab project if sharing --> |
 
 ---
 
@@ -141,11 +119,6 @@ Bring the full board together using a 4-layer stackup, clean component placement
 5. Export / one-click order on JLCPCB and verify BOM & component placement (CPL) before checkout
 6. <!-- TODO: Add any Part 5 specific layout detail (e.g., exact board dimensions/stackup order from #I5) -->
 
-### Resources
-
-| | |
-| --- | --- |
-| Board Outline / Starter Files | <!-- TODO: Add DXF / Gerber / OSHWLab link if applicable --> |
 
 ---
 
