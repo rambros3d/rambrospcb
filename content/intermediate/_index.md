@@ -133,5 +133,5 @@ Once your DRC passes cleanly, order your board and test real hardware—your ski
 
 * Use my **SPECIAL coupon** (same as the [Beginner Series](/beginner/#part-4-order-the-board)) to get a discount on JLCPCB.
 * Select **EPOST** or **Registered Air Mail** for budget-friendly shipping to India, and keep customs duties in mind.
-* Have a doubt? Drop it in the **YouTube comments** or ask in our **Telegram Group** (check the [FAQ](/faq/) for the invite link—please avoid DMs for PCB doubts).
+* Have a doubt? Drop it in the **YouTube comments** or ask in our [**Telegram Group**](https://t.me/rambrospcb) (check the [FAQ](/faq/) for the invite link—please avoid DMs for PCB doubts).
 * Ready for more? Check out the **Advanced Series** on [YouTube](https://www.youtube.com/playlist?list=PLXfXtnovm_eE)!
