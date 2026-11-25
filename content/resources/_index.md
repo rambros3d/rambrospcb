@@ -14,6 +14,13 @@ Specific tutorial resources are available on their respective **tutorial series*
   ["[EasyEDA](https://easyeda.com/)", "100% Free - recommended"]
 ]) }}
 
+## Tools & Calculators
+
+{{ table(rows=[
+  ["[JLCPCB Capabilities](https://jlcpcb.com/capabilities/pcb-capabilities)", "Manufacturing design rules, drill limits, stackups, and panelization specs"],
+  ["[JLCPCB Impedance Calculator](https://jlcpcb.com/pcb-impedance-calculator)", "Trace width and spacing calculator for controlled-impedance signals like USB"]
+]) }}
+
 ## Components Search
 
 {{ table(rows=[
