@@ -1,6 +1,9 @@
 +++
 title = "Advanced Series"
 description = "Design a production-ready 4-layer ESP32-S3 hardware product (RK-ULTRA) from requirements and schematic architecture to custom stackups, impedance control, and DFM/DFA/DFT."
+
+[extra]
+katex = true
 +++
 
 Move beyond hobby breakout boards and learn how commercial hardware is engineered for real batch manufacturing. Across six episodes, we design **RK-ULTRA**—a compact, 4-layer, multi-function RC scale-model controller built from scratch for real-world kit production.
